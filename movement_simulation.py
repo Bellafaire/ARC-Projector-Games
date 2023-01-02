@@ -34,7 +34,7 @@ class WalkingPerson:
             any given movement the person will change directions and velocity, otherwise it smoothly moves in its last decided direction
         """
         if(random.random() < 0.025): 
-            self.direction = 2 * np.pi * random.random() - np.pi
+            self.direction = random.uniform(-np.pi, np.pi)
 
             #calculate the direction to the center of the field 
             diff = (self.position[0] - self.field_size[0]/2, self.position[1] - self.field_size[1]/2)  
@@ -49,7 +49,7 @@ class WalkingPerson:
 
         self.position[0] += self.velocity * np.cos(self.direction)
         self.position[1] += self.velocity * np.sin(self.direction)
-        self.velocity *= 0.96
+        self.velocity *= 0.99
 
         if(self.position[0] > self.field_size[0]): 
             self.position[0] = self.field_size[0]
