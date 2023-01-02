@@ -2,3 +2,5 @@
 .vscode/
 
 lidar_output.txt
+
+*.pyc
