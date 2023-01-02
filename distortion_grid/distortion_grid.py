@@ -62,7 +62,8 @@ class LocationParser():
             # return positions
             return position_list
             
-POSITION_FILE_LOCATION = "/home/matthew/ros_ws/src/lidar-people-detect/makers_people_detection/lidar_output.txt"
+# POSITION_FILE_LOCATION = "/home/matthew/ros_ws/src/lidar-people-detect/makers_people_detection/lidar_output.txt"
+POSITION_FILE_LOCATION = "/home/matthew/Documents/ARC-Projector-Games/lidar_output.txt"
 lidar_positioner = LocationParser(POSITION_FILE_LOCATION, 3, 2, 1920, 1080)
 
 pygame.init()
