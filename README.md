@@ -1,10 +1,11 @@
 # ARC-Projector-Games
 
 This repo contains the games for the Augmented Reality Center Interactive display project. 
-Each game is contained in its own folder inside this repo. 
+Each game is contained in its own python file inside this repo. 
 Current games incldue: 
 - random particles 
 - distortion grid
+- makers soccer
 
 All games interact with the [lidar-people-detect](https://github.com/Makers-Oakland-University/lidar-people-detect) ros project through the lidar_output.txt file which will be generated when the ros system is running. 
 To deploy these games with the projector, both the game **AND** the ros system must be running at the same time. 
