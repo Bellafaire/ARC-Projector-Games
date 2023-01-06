@@ -1,5 +1,5 @@
+#!/usr/bin/ python3
 # Simple pygame program
-
 
 # Import and initialize the pygame library
 

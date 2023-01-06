@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class LocationParser(): 
     def __init__(self, file_location, field_width_meters, field_height_meters, field_width_pixels, field_height_pixels, debug_print=False):
         """LOCATION PARSER, if you're creating new games copy this entire class and the two lines directly after it

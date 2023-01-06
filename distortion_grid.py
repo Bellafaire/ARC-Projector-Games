@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # Simple pygame program
 # Import and initialize the pygame library
@@ -10,7 +10,7 @@ import sys
 from location_parser import LocationParser
            
 # POSITION_FILE_LOCATION = "/home/matthew/ros_ws/src/lidar-people-detect/makers_people_detection/lidar_output.txt"
-POSITION_FILE_LOCATION = "/home/arcd/catkin_ws/src/Lidar-People-Detect/makers_people_detection/lidar_output.txt"
+POSITION_FILE_LOCATION = "/home/matthew/Documents/ARC-Projector-Games/lidar_output.txt"
 lidar_positioner = LocationParser(POSITION_FILE_LOCATION, 4, 2, 1920, 1080)
 
 pygame.init()
