@@ -9,9 +9,7 @@ import numpy as np
 import sys
 from location_parser import LocationParser
            
-# POSITION_FILE_LOCATION = "/home/matthew/ros_ws/src/lidar-people-detect/makers_people_detection/lidar_output.txt"
-POSITION_FILE_LOCATION = "/home/matthew/Documents/ARC-Projector-Games/lidar_output.txt"
-lidar_positioner = LocationParser(POSITION_FILE_LOCATION, 4, 2, 1920, 1080)
+lidar_positioner = LocationParser()
 
 pygame.init()
 
