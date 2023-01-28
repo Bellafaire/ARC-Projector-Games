@@ -1,1 +1,1 @@
-/home/matthew/Documents/ARC-Projector-Games/lidar_output.txt
+/home/arcd/catkin_ws/src/Lidar-People-Detect/makers_people_detection/lidar_output.txt

@@ -7,7 +7,7 @@ import sys
 from location_parser import LocationParser
 
 class SoccerBall(): 
-    def __init__(self, max_velocity = 10,  radius=50, bounds=(0,0, 1920,1080), initial_position=(1920/2,1080/2), initial_velocitiy=None):
+    def __init__(self, max_velocity = 5,  radius=50, bounds=(0,0, 1920,1080), initial_position=(1920/2,1080/2), initial_velocitiy=None):
         """Soccer ball object that interacts with the players 
 
         Args:
@@ -99,7 +99,7 @@ class SoccerBall():
         return ret
 
     def draw(self, screen): 
-        # pygame.draw.circle(screen, (255,255,255), (self.x, self.y), self.radius, 5)
+        pygame.draw.circle(screen, (255,255,255), (self.x, self.y), self.radius + 10, 30)
     
         rotated_sprite = pygame.transform.rotate(self.sprite, int(self.theta))
         pos = rotated_sprite.get_rect()
@@ -152,7 +152,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREE
 #lidar positioner that handles the parsing of the file into a tuple array. 
 #see location_parser.py for parameter description.
 lidar_positioner = LocationParser()
-soccer_ball = SoccerBall(radius=75)
+soccer_ball = SoccerBall(radius=125)
 soccer_field = SoccerField()
 
 running = True #indicates the game is currently running
@@ -169,6 +169,8 @@ while running:
     # Fill the background with black
     screen.fill((0,0,0, 1))
     soccer_field.draw(screen)
+
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(0,0,1920,1080), 10)
 
     #get positions from the LocationParser
     positions = lidar_positioner.getPositions()
